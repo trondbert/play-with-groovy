@@ -17,3 +17,15 @@ iter = impl as Iterator
 while (iter.hasNext())
   println iter.next()
   
+x = "test" //don't have to have "def"
+println x 
+
+println "========= File tricks============"
+new File("src/main/resources").eachFile { 
+	file ->
+	if (file.name ==~ /.*\.groovy/) {
+		println file.name
+	}	 
+}
+
+
